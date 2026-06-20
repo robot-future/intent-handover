@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers">
+  <meta name="description" content="Intent-Handover grounds spoken instructions and visual scene context into grasp and delivery constraints for trustworthy robot-to-human handovers.">
+  <meta name="keywords" content="robot-to-human handover, human-robot interaction, language grounding, human-usage regions, trustworthy robotics, robot grasping, embodied AI">
+  <meta name="author" content="Hanxin Zhang, Abdulqader Dhafer, Hongbiao Dong, Zhou Daniel Hao">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="DANiLab, University of Leicester">
+  <meta property="og:title" content="Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers">
+  <meta property="og:description" content="Intent-Handover grounds spoken instructions and visual scene context into grasp and delivery constraints for trustworthy robot-to-human handovers.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Hanxin Zhang">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Robot-to-Human Handover">
+  <meta property="article:tag" content="Language Grounding">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DANiLab_UoL">
+  <meta name="twitter:creator" content="@HanxinZhang">
+  <meta name="twitter:title" content="Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers">
+  <meta name="twitter:description" content="Intent-Handover grounds spoken instructions and visual scene context into grasp and delivery constraints for trustworthy robot-to-human handovers.">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers">
+  <meta name="citation_author" content="Zhang, Hanxin">
+  <meta name="citation_author" content="Dhafer, Abdulqader">
+  <meta name="citation_author" content="Dong, Hongbiao">
+  <meta name="citation_author" content="Hao, Zhou Daniel">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems">
+  <meta name="citation_pdf_url" content="IntentHandover_arxiv.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <title>Intent-Handover - Zhang et al.</title>
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css?v=20260620-11">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js?v=20260619-4"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers",
+    "description": "Intent-Handover grounds spoken instructions and visual scene context into grasp and delivery constraints for trustworthy robot-to-human handovers.",
+    "author": [
+      {"@type": "Person", "name": "Hanxin Zhang", "affiliation": {"@type": "Organization", "name": "DANiLab, University of Leicester"}},
+      {"@type": "Person", "name": "Abdulqader Dhafer", "affiliation": {"@type": "Organization", "name": "DANiLab, University of Leicester"}},
+      {"@type": "Person", "name": "Hongbiao Dong", "affiliation": {"@type": "Organization", "name": "University of Birmingham"}},
+      {"@type": "Person", "name": "Zhou Daniel Hao", "affiliation": {"@type": "Organization", "name": "DANiLab, University of Leicester"}}
+    ],
+    "datePublished": "2026-06-18",
+    "publisher": {
+      "@type": "Organization",
+      "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+    },
+    "url": "",
+    "image": "",
+    "keywords": ["robot-to-human handover", "human-robot interaction", "language grounding", "human-usage regions", "trustworthy robotics", "robot grasping"],
+    "abstract": "Intent-Handover grounds unconstrained speech and visual scene context into explicit grasp and delivery constraints for robot-to-human object handover.",
+    "citation": "@inproceedings{zhang2026intenthandover, title={Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers}, author={Zhang, Hanxin and Dhafer, Abdulqader and Dong, Hongbiao and Hao, Zhou Daniel}, booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems}, year={2026}}",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": ""
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DANiLab, University of Leicester",
+    "url": "https://le.ac.uk",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+<canvas id="fireworks-canvas"></canvas>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+  <main id="main-content">
+  <section class="hero paper-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Intent-Handover: Grounding Language in Human-Usage Regions <br class="desktop-title-break">for Trustworthy Robot-to-Human Handovers</h1>
+              <div class="is-size-5 publication-authors publication-author-list">
+                <span class="author-block">
+                <a href="https://hanxin-zhang.github.io/" target="_blank" rel="noopener">Hanxin Zhang</a><sup>1,2</sup><span class="author-separator">,</span></span>
+              <span class="author-block">
+                <a href="https://adhafer.github.io/" target="_blank" rel="noopener">Abdulqader Dhafer</a><sup>1,2</sup><span class="author-separator">,</span></span>
+              <span class="author-block">
+                <a href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/dong-hongbiao" target="_blank" rel="noopener">Hongbiao Dong</a><sup>3</sup><span class="author-separator">,</span></span>
+              <span class="author-block">
+                <a href="https://le.ac.uk/people/daniel-hao" target="_blank" rel="noopener">Zhou Daniel Hao</a><sup>1,2</sup>&#9993;
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors publication-affiliations">
+              <span class="author-block publication-affiliation-lines">
+                <span class="publication-affiliation-line"><sup>1</sup>DANiLab, University of Leicester</span>
+                <span class="publication-affiliation-line"><sup>2</sup>School of Computing and Mathematical Sciences,<br class="mobile-affiliation-break"> University of Leicester</span>
+                <span class="publication-affiliation-line"><sup>3</sup>School of Metallurgy and Materials, University of Birmingham</span>
+              </span>
+              <span class="venue-badge">
+                <span class="venue-badge-main">Accepted by IEEE/RSJ International Conference on <br class="desktop-venue-break">Intelligent Robots and Systems (IROS 2026)</span>
+              </span>
+            </div>
+
+            <div class="publication-logo-strip" aria-label="DANiLab and University of Leicester logos">
+              <a class="publication-logo-link" href="https://www.danilab.org/" target="_blank" rel="noopener" aria-label="Visit DANiLab">
+                <img
+                  class="publication-affiliation-logo publication-affiliation-logo-danilab"
+                  src="assets/danilab.png"
+                  alt="DANiLab">
+              </a>
+              <img
+                class="publication-affiliation-logo publication-affiliation-logo-uol"
+                src="assets/RedBlockUoLlogo.png"
+                alt="University of Leicester">
+            </div>
+
+                  <div class="column has-text-centered publication-links-column">
+                    <div class="publication-links">
+                      <!-- Paper button -->
+                      <span class="link-block">
+                        <a href="IntentHandover_arxiv.pdf"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                      <!-- arXiv button -->
+                      <span class="link-block">
+                        <a href="IntentHandover_arxiv.pdf"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+
+                    <!-- Code button -->
+                    <span class="link-block">
+                      <a class="external-link button is-normal is-rounded is-dark is-disabled"
+                      aria-disabled="true" role="button" tabindex="-1">
+                      <span class="icon">
+                        <i class="fas fa-code"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+                <p class="release-note">We are cleaning up the code, and it will be released soon.</p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr class="section-divider">
+
+<!-- Teaser figure -->
+<section class="hero teaser">
+  <div class="container is-max-desktop teaser-container">
+    <div class="hero-body">
+      <p class="teaser-intro">
+        Introduction
+      </p>
+      <p class="teaser-intro-copy">What is Intent-Handover?</p>
+      <div class="teaser-layout-shell" data-teaser-flip-shell>
+        <div class="teaser-flip-card" data-teaser-flip-card>
+          <div class="teaser-flip-face teaser-flip-front">
+            <figure class="teaser-layout teaser-figure-card">
+              <div class="teaser-figure-column">
+                <div class="teaser-image-wrapper">
+                  <img src="assets/system_overview.png" alt="Intent-guided robot-to-human object handover system overview" class="teaser-image">
+                  <button class="teaser-flip-button teaser-play-button" type="button" data-teaser-flip-button aria-label="Play Intent-Handover video">
+                    <span class="icon teaser-play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                    <span>Watch Video</span>
+                  </button>
+                </div>
+              </div>
+              <figcaption class="teaser-figure-caption">
+                <strong>Fig. 1: Intent-Guided Robot-to-Human Object Handover.</strong>
+                (a) Intent-Guided Grasping: A Vision–Language Model and diffusion model infer user intent and human grasp pose from speech and RGB inputs. The system then optimizes the robot grasp configuration. (b) Execution: The robot aligns the object with the receiving hand for ergonomic delivery.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="teaser-flip-face teaser-flip-back" aria-hidden="true">
+            <div class="teaser-video-card">
+              <button class="teaser-flip-button teaser-fullscreen-button" type="button" data-teaser-fullscreen-button aria-label="Open Intent-Handover video fullscreen">
+                <span class="icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                <span>Fullscreen</span>
+              </button>
+              <video class="teaser-video" src="assets/IntentHandover_video_v8.mp4" controls preload="metadata" playsinline></video>
+              <button class="teaser-flip-button teaser-flip-back-button" type="button" data-teaser-flip-back-button aria-label="Return to Fig. 1">
+                <span class="icon" aria-hidden="true"><i class="fas fa-undo"></i></span>
+                <span>Back</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End teaser figure -->
+
+<!-- Key highlights -->
+<section class="section hero abstract-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Key Highlights</h2>
+
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <span class="highlight-icon" aria-hidden="true"><i class="fas fa-comments"></i></span>
+              <p class="highlight-title"><strong>Intent Grounding</strong></p>
+            </div>
+            <p class="highlight-desc">Inferring human handover intent from visual and verbal cues.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <span class="highlight-icon" aria-hidden="true"><i class="fas fa-hand-paper"></i></span>
+              <p class="highlight-title"><strong>Grasp Optimization</strong></p>
+            </div>
+            <p class="highlight-desc">Selecting robotic grasps based on affordance and safety constraints.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-header">
+              <span class="highlight-icon" aria-hidden="true"><i class="fas fa-user-check"></i></span>
+              <p class="highlight-title"><strong>Design Validation</strong></p>
+            </div>
+            <p class="highlight-desc">Validating the system design principles through user studies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End key highlights -->
+
+<!-- Framework overview -->
+<section class="section hero framework-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 framework-title">Methods</h2>
+        <p class="framework-description">
+          Intent-Handover is organized into two phases: intent-guided grasping and ergonomic execution.
+        </p>
+        <div class="method-phase-grid" aria-label="Intent-Handover method phases">
+          <article class="method-phase-card">
+            <div class="method-phase-copy">
+              <span class="method-phase-kicker">Phase 1</span>
+              <h3>Intent-Guided Grasping</h3>
+              <p>Ground spoken instructions and visual cues into explicit grasp constraints for safe handover planning.</p>
+            </div>
+            <figure class="method-phase-figure">
+              <img src="assets/grasping_phase.png" alt="Intent-guided grasping phase" loading="lazy">
+            </figure>
+          </article>
+
+          <article class="method-phase-card">
+            <div class="method-phase-copy">
+              <span class="method-phase-kicker">Phase 2</span>
+              <h3>Execution</h3>
+              <p>Execute the selected grasp while aligning the object with the receiving hand for ergonomic delivery.</p>
+            </div>
+            <figure class="method-phase-figure">
+              <img src="assets/execution_phase.png" alt="Execution phase for robot-to-human handover" loading="lazy">
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End framework overview -->
+
+<!-- Experiments -->
+<section class="section hero experiments-section" id="experiments">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Experiments</h2>
+
+        <div class="experiments-showcase" aria-label="Intent-Handover experiments">
+          <article class="experiment-media-card experiment-media-card-procedure">
+            <div class="experiment-card-copy">
+              <span class="experiment-kicker">Procedure / User Cases</span>
+              <h3>Real-world Experiment</h3>
+              <p>The front shows the staged handover procedure; the back shows representative user-study samples.</p>
+            </div>
+            <div class="experiment-flip-shell" data-experiment-flip-shell>
+              <div class="experiment-flip-card" data-experiment-flip-card>
+                <figure class="experiment-flip-face experiment-flip-front experiment-media-box">
+                  <img src="assets/procedure_stages.png" alt="Handover experiment procedure stages" loading="lazy">
+                </figure>
+                <figure class="experiment-flip-face experiment-flip-back experiment-media-box experiment-video-box" aria-hidden="true">
+                  <video src="assets/use_study.mp4" controls muted playsinline loop preload="metadata" aria-label="User-study samples"></video>
+                </figure>
+              </div>
+              <div class="experiment-flip-controls">
+                <button class="experiment-flip-button" type="button" data-experiment-flip-button aria-label="Show user-study samples">
+                  <span class="icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                  <span>User Cases</span>
+                </button>
+                <button class="experiment-flip-button experiment-flip-back-button" type="button" data-experiment-flip-back-button aria-label="Return to handover procedure" hidden>
+                  <span class="icon" aria-hidden="true"><i class="fas fa-undo"></i></span>
+                  <span>Procedure</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="experiment-media-card experiment-media-card-objects">
+            <div class="experiment-card-copy">
+              <span class="experiment-kicker">Objects</span>
+              <h3>16 Object Handover Cases</h3>
+              <p>Objects cover diverse shapes, affordances, and human-usage regions for evaluating grasp selection.</p>
+            </div>
+            <figure class="experiment-media-box">
+              <img src="assets/handover_cases.png" alt="Sixteen object handover cases" loading="lazy">
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Experiments -->
+
+<!-- Results -->
+<section class="section hero results-section" id="results">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Results</h2>
+        <p class="results-subtitle">
+          We studied how Intent-Handover affects trust, safety, and comfort during real handovers.
+        </p>
+
+        <div class="results-findings" aria-label="Intent-Handover research questions, hypotheses, and findings">
+          <article class="finding-card">
+            <div class="finding-heading">
+              <span class="finding-tag">RQ1</span>
+              <h3>To what extent does the robot's grasp region affect user trust during handover?</h3>
+              <p class="finding-context">Correctly inferring the intended object alone is insufficient; grasping an inappropriate region may still undermine trust.</p>
+            </div>
+            <div class="finding-row">
+              <span>H1</span>
+              <p>Users trust the robot more when it delivers the object in a grasp that is easy for them to use.</p>
+            </div>
+            <div class="finding-row finding-row-strong">
+              <span>Finding</span>
+              <p>These results support H1. Overall, competence is the most sensitive trust dimension; benevolence did not reach significance in either contrast after Bonferroni correction.</p>
+            </div>
+          </article>
+
+          <article class="finding-card">
+            <div class="finding-heading">
+              <span class="finding-tag">RQ2</span>
+              <h3>To what extent does failing to consider the user's hand affect perceived comfort and safety?</h3>
+              <p class="finding-context">Even if users can adjust their receiving pose, neglecting hand-gripper collision avoidance may reduce psychological safety.</p>
+            </div>
+            <div class="finding-row">
+              <span>H2</span>
+              <p>Users feel less safe and comfortable when the robot does not optimize for hand-gripper collision avoidance.</p>
+            </div>
+            <div class="finding-row finding-row-strong">
+              <span>Finding</span>
+              <p>These findings partially support H2: disabling hand-gripper collision avoidance alone significantly reduces perceived safety, but comfort does not decrease until human-usage region awareness is also removed.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="results-showcase">
+          <article class="result-card result-card-main">
+            <div class="result-card-copy">
+              <span class="result-kicker">User Study</span>
+              <h3>Trust, Safety, and Comfort Ratings</h3>
+              <p>Human-usage region awareness improves perceived competence and reliability, while hand-gripper collision avoidance mainly improves perceived safety.</p>
+            </div>
+            <a class="result-figure-link" href="assets/fig5.png" target="_blank" rel="noopener" aria-label="Open Fig. 5 user-study results full size">
+              <img src="assets/fig5.png" alt="User-study results for trust, perceived safety, and interaction comfort" loading="lazy">
+              <span class="result-zoom-hint" aria-hidden="true">
+                <i class="fas fa-search-plus"></i>
+                <span>Pinch to zoom</span>
+              </span>
+            </a>
+          </article>
+
+          <div class="results-evidence-grid" aria-label="Detailed result tables">
+            <article class="result-card result-card-table">
+              <div class="result-card-copy">
+                <span class="result-kicker">Statistics</span>
+                <h3>Pairwise Comparisons</h3>
+                <p>Full Strategy outperforms the ablations on competence, reliability, perceived safety, and combined comfort.</p>
+              </div>
+              <a class="result-table-link" href="assets/table1.png" target="_blank" rel="noopener" aria-label="Open Table I pairwise comparisons full size">
+                <img src="assets/table1.png" alt="Pairwise comparison results for user-study conditions" loading="lazy">
+                <span class="result-zoom-hint" aria-hidden="true">
+                  <i class="fas fa-search-plus"></i>
+                  <span>Pinch to zoom</span>
+                </span>
+              </a>
+            </article>
+
+            <article class="result-card result-card-table result-card-objective">
+              <div class="result-card-copy">
+                <span class="result-kicker">Objective Logs</span>
+                <h3>Pipeline Performance</h3>
+                <p>Intent identification succeeds in 88.00% of trials, with an 11.30 s mean total pipeline time.</p>
+              </div>
+              <a class="result-table-link" href="assets/table2.png" target="_blank" rel="noopener" aria-label="Open Table II objective pipeline performance full size">
+                <img src="assets/table2.png" alt="Objective performance of the full-strategy Intent-Handover pipeline" loading="lazy">
+                <span class="result-zoom-hint" aria-hidden="true">
+                  <i class="fas fa-search-plus"></i>
+                  <span>Pinch to zoom</span>
+                </span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title is-3">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{zhang2026intenthandover,
+  title={Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers},
+  author={Zhang, Hanxin and Dhafer, Abdulqader and Dong, Hongbiao and Hao, Zhou Daniel},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year={2026}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  </body>
+  </html>
