@@ -209,7 +209,7 @@ a:hover {
 
 .publication-logo-strip {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 2rem;
   flex-wrap: nowrap;
@@ -252,25 +252,16 @@ a:hover {
 }
 
 .publication-affiliation-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 56px;
-  color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.1;
-  white-space: nowrap;
-}
-
-.publication-affiliation-logo-danilab {
-  color: var(--nature-teal-dark);
-  font-size: 1.34rem;
+  display: block;
+  width: auto;
+  max-width: min(42vw, 260px);
+  height: 56px;
+  object-fit: contain;
 }
 
 .publication-affiliation-logo-uol {
-  font-size: 1.22rem;
+  height: 62px;
+  max-width: min(46vw, 300px);
 }
 
 @media screen and (min-width: 769px) {
