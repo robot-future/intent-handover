@@ -469,6 +469,12 @@ function setupTeaserFlipVideo() {
     front.setAttribute('tabindex', '0');
     front.setAttribute('aria-label', 'Play Intent-Handover video');
 
+    function setFrontInteractive(isInteractive) {
+        front.setAttribute('aria-hidden', String(!isInteractive));
+        front.tabIndex = isInteractive ? 0 : -1;
+        button.hidden = !isInteractive;
+    }
+
     function toNumber(value) {
         const parsed = parseFloat(value);
         return Number.isFinite(parsed) ? parsed : 0;
@@ -524,7 +530,7 @@ function setupTeaserFlipVideo() {
         updateVideoSize();
         shell.classList.add('is-video');
         back.setAttribute('aria-hidden', 'false');
-        front.setAttribute('aria-hidden', 'true');
+        setFrontInteractive(false);
 
         window.setTimeout(function() {
             setVideoPlaybackRate();
@@ -540,7 +546,7 @@ function setupTeaserFlipVideo() {
         video.pause();
         shell.classList.remove('is-video');
         back.setAttribute('aria-hidden', 'true');
-        front.setAttribute('aria-hidden', 'false');
+        setFrontInteractive(true);
 
         window.setTimeout(function() {
             card.style.removeProperty('--teaser-card-height');
