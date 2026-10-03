@@ -1,0 +1,5 @@
+include README.md CHANGELOG.md CITATION.cff LICENSE THIRD_PARTY.md
+recursive-include docs *.md *.json *.svg *.png *.gif *.mp4
+recursive-include examples *.json
+recursive-include tests *.py
+recursive-include scripts *.py

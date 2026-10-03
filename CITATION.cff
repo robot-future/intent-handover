@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using Intent-Handover."
+type: software
+title: "Intent-Handover: Grounding Language in Human-Usage Regions for Trustworthy Robot-to-Human Handovers"
+authors:
+  - family-names: Zhang
+    given-names: Hanxin
+  - family-names: Dhafer
+    given-names: Abdulqader
+  - family-names: Dong
+    given-names: Hongbiao
+  - family-names: Hao
+    given-names: Zhou Daniel
+license: MIT
+repository-code: "https://github.com/robot-future/intent-handover"

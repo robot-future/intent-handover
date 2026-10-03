@@ -1,0 +1,24 @@
+name: CPU tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[dataset]' build
+      - run: python -m unittest discover -s tests -v
+      - run: python -m intent_handover demo
+      - run: python -m intent_handover ablate
+      - run: python -m build
+      - name: Smoke test the wheel outside the checkout
+        run: |
+          python -m pip install --force-reinstall --no-deps dist/*.whl
+          cd "$RUNNER_TEMP"
+          python -m intent_handover demo --output wheel_demo
+          python -m intent_handover ablate --output wheel_ablation

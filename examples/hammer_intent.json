@@ -1,0 +1,9 @@
+{
+  "instruction": "I need to hammer a nail.",
+  "object_id": "hammer",
+  "human_region": "handle",
+  "robot_region": "head",
+  "hand": "right",
+  "text2hoi_prompt": "Grasp a hammer with right hand.",
+  "needs_clarification": false
+}

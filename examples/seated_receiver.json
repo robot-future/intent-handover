@@ -1,0 +1,13 @@
+{
+  "schema_version": "handover.skeleton.v1",
+  "units": "m",
+  "provenance": "Authored seated-receiver keypoints, not participant data",
+  "left_shoulder": [-0.79, -0.63, 1.30],
+  "right_shoulder": [-0.41, -0.63, 1.30],
+  "elbow": [-0.60, -0.63, 1.02],
+  "wrist": [-0.60, -0.39, 1.02],
+  "desk_height_m": 0.735,
+  "facing_hint_world": [0, 1, 0],
+  "extension_axis_world": [1, 0, 0],
+  "wrist_extension_deg": 15
+}

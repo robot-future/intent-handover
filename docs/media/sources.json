@@ -1,0 +1,188 @@
+{
+  "hero": {
+    "kind": "evaluated_isaacsim_replay",
+    "trial_id": "screwdriver_FS_screwdriver_receiver_41_0005_right",
+    "strategy": "FS",
+    "views": [
+      "overview",
+      "right"
+    ],
+    "presentation": "Synchronized views of one saved trajectory",
+    "source_sha256": {
+      "overview": "2bf2790d9d241cd084742baa1e1e913c9497f55c75af6b2cc7bc6cfc8e7ebf35",
+      "right": "2977bbf744c9f61cb4f441343dee62e5f0dd8948b0f65e4c1cc01be52f3e399b"
+    },
+    "receiver_side": "right",
+    "receiver_seed": 41,
+    "playback_speed": 0.5,
+    "validation": {
+      "success": true,
+      "metrics": {
+        "stability": true,
+        "plan": true,
+        "reach": true,
+        "affordance": true,
+        "safe": true
+      },
+      "validated_frames": 91,
+      "path_collision_free": true,
+      "method_replay_equivalent": true,
+      "camera_trajectories_identical": true
+    },
+    "terminal_joint_degrees": [
+      18.048,
+      -51.892,
+      55.697,
+      -84.287,
+      -140.867,
+      6.313
+    ]
+  },
+  "gallery": {
+    "kind": "evaluated_isaacsim_replay",
+    "source_sha256": "6398e3c842e4b994508d29e18c66fe31884ae5804a1a1405d7cf358c79231ad3",
+    "playback_speed": 0.5,
+    "presentation": "Four independent trials, aligned at their first frame and held at the end",
+    "trials": [
+      {
+        "trial_id": "can_A2_can_receiver_41_0010_left",
+        "object_id": "can",
+        "variant": "A2",
+        "success": true,
+        "first_failure": null,
+        "metrics": {
+          "stability": true,
+          "plan": true,
+          "reach": true,
+          "affordance": null,
+          "safe": true
+        },
+        "camera": "overview",
+        "frames": 79,
+        "terminal_joint_deg": [
+          6.0323,
+          -62.1883,
+          70.4656,
+          -109.3449,
+          -49.1887,
+          -42.9507
+        ],
+        "sample_index": 10,
+        "side": "left",
+        "detail_overview_arrays_identical": true
+      },
+      {
+        "trial_id": "can_A2_can_receiver_41_0005_right",
+        "object_id": "can",
+        "variant": "A2",
+        "success": true,
+        "first_failure": null,
+        "metrics": {
+          "stability": true,
+          "plan": true,
+          "reach": true,
+          "affordance": null,
+          "safe": true
+        },
+        "camera": "overview",
+        "frames": 97,
+        "terminal_joint_deg": [
+          13.1951,
+          -72.8928,
+          94.6645,
+          -142.5866,
+          -45.1412,
+          -26.1162
+        ],
+        "sample_index": 5,
+        "side": "right",
+        "detail_overview_arrays_identical": true
+      },
+      {
+        "trial_id": "screwdriver_A2_screwdriver_receiver_41_0000_left",
+        "object_id": "screwdriver",
+        "variant": "A2",
+        "success": true,
+        "first_failure": null,
+        "metrics": {
+          "stability": true,
+          "plan": true,
+          "reach": true,
+          "affordance": true,
+          "safe": true
+        },
+        "camera": "overview",
+        "frames": 169,
+        "terminal_joint_deg": [
+          19.547,
+          -78.6855,
+          76.5553,
+          -102.2412,
+          -107.9211,
+          94.6029
+        ],
+        "sample_index": 0,
+        "side": "left",
+        "detail_overview_arrays_identical": true
+      },
+      {
+        "trial_id": "screwdriver_A2_screwdriver_receiver_41_0021_right",
+        "object_id": "screwdriver",
+        "variant": "A2",
+        "success": true,
+        "first_failure": null,
+        "metrics": {
+          "stability": true,
+          "plan": true,
+          "reach": true,
+          "affordance": true,
+          "safe": true
+        },
+        "camera": "overview",
+        "frames": 127,
+        "terminal_joint_deg": [
+          9.2306,
+          -75.2116,
+          86.2145,
+          -121.7259,
+          -78.0028,
+          70.3029
+        ],
+        "sample_index": 21,
+        "side": "right",
+        "detail_overview_arrays_identical": true
+      }
+    ],
+    "receiver_seed": 41,
+    "camera": "overview",
+    "showcase_selection": "Posture-reviewed examples from the seeded receiver bank"
+  },
+  "paper": {
+    "figure": 2,
+    "source": "IROS26_3319_FI.pdf",
+    "source_sha256": "605509ff3a1dbb6e32b9379e8d99f1a685191bb2b7b350a08284c34e4082227e",
+    "url": "https://robot-future.github.io/intent-handover/IntentHandover_arxiv.pdf"
+  },
+  "files": {
+    "intent-handover.gif": {
+      "bytes": 1855435,
+      "sha256": "4f52d0f97f132c79806f4aa25a27d262a3546498aa6b4d2972ab4aa9ffacba27"
+    },
+    "receiver-gallery.mp4": {
+      "bytes": 615731,
+      "sha256": "6398e3c842e4b994508d29e18c66fe31884ae5804a1a1405d7cf358c79231ad3"
+    },
+    "receiver-gallery.gif": {
+      "bytes": 4569966,
+      "sha256": "23fb2e5d2efa8038e58e816720545e43b5bac1a57bd0a51aeeb5894ff86a2bc7"
+    },
+    "paper-method.png": {
+      "bytes": 353225,
+      "sha256": "4431a940dc124d411b51498ac4ded9a49f27a8ea0440eafc6b907160be973c23"
+    },
+    "intent-handover.mp4": {
+      "bytes": 134979,
+      "sha256": "eb923077fd2bb9770182c1f4b89ed932de9a0f2cdb2e3d6848e63dec622ac35a"
+    }
+  }
+}

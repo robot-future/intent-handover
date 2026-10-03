@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intent-handover"
+version = "0.7.0"
+description = "Runnable intent-aware handover grasp selection and optional Text2HOI inference"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23"]
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY.md", "src/intent_handover/_vendor/text2hoi/LICENSE.txt"]
+
+[project.optional-dependencies]
+dataset = ["PyYAML>=6", "trimesh>=4"]
+text2hoi = ["torch>=1.13", "tqdm>=4.60"]
+download = ["gdown>=5.0"]
+mano = ["torch>=1.13", "smplx>=0.1.28", "scipy>=1.10", "six>=1.11", "numpy<2"]
+
+[project.urls]
+Repository = "https://github.com/robot-future/intent-handover"
+Issues = "https://github.com/robot-future/intent-handover/issues"
+
+[project.scripts]
+intent-handover = "intent_handover.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+intent_handover = ["assets/*.json", "assets/*.txt"]
+"intent_handover._vendor.text2hoi" = ["LICENSE.txt"]

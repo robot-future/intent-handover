@@ -1,0 +1,461 @@
+{
+  "schema_version": "handover.scene.v1",
+  "units": "m",
+  "provenance": "Procedural release demo with fixed receiving-hand geometry",
+  "utterance": "I want to tighten this screw.",
+  "intent": {
+    "object_id": "screwdriver",
+    "human_region": "handle",
+    "robot_region": "shaft",
+    "hand": "right",
+    "text2hoi_prompt": "Grasp a screwdriver with right hand."
+  },
+  "object": {
+    "id": "screwdriver",
+    "boxes": [
+      {
+        "center": [
+          0.0,
+          0.0,
+          -0.075
+        ],
+        "half_extents": [
+          0.019,
+          0.019,
+          0.055
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "handle"
+      },
+      {
+        "center": [
+          0.0,
+          0.0,
+          0.04
+        ],
+        "half_extents": [
+          0.004,
+          0.004,
+          0.065
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "shaft"
+      }
+    ],
+    "usage_regions": {
+      "handle": [
+        {
+          "center": [
+            0.0,
+            0.0,
+            -0.075
+          ],
+          "half_extents": [
+            0.019,
+            0.019,
+            0.055
+          ],
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "label": "handle"
+        }
+      ],
+      "shaft": [
+        {
+          "center": [
+            0.0,
+            0.0,
+            0.04
+          ],
+          "half_extents": [
+            0.004,
+            0.004,
+            0.065
+          ],
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "label": "shaft"
+        }
+      ]
+    }
+  },
+  "receiving_hand": {
+    "center": [
+      -0.075,
+      0,
+      -0.075
+    ],
+    "direction": [
+      1,
+      0,
+      0
+    ],
+    "boxes": [
+      {
+        "center": [
+          -0.105,
+          0.0,
+          -0.075
+        ],
+        "half_extents": [
+          0.025,
+          0.038,
+          0.012
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "palm"
+      },
+      {
+        "center": [
+          -0.062,
+          -0.027,
+          -0.075
+        ],
+        "half_extents": [
+          0.018,
+          0.006,
+          0.009
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "finger"
+      },
+      {
+        "center": [
+          -0.062,
+          -0.009,
+          -0.075
+        ],
+        "half_extents": [
+          0.018,
+          0.006,
+          0.009
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "finger"
+      },
+      {
+        "center": [
+          -0.062,
+          0.009,
+          -0.075
+        ],
+        "half_extents": [
+          0.018,
+          0.006,
+          0.009
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "finger"
+      },
+      {
+        "center": [
+          -0.062,
+          0.027,
+          -0.075
+        ],
+        "half_extents": [
+          0.018,
+          0.006,
+          0.009
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "finger"
+      },
+      {
+        "center": [
+          -0.085,
+          -0.047,
+          -0.075
+        ],
+        "half_extents": [
+          0.018,
+          0.008,
+          0.01
+        ],
+        "rotation": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "label": "thumb"
+      }
+    ]
+  },
+  "gripper": {
+    "max_opening_m": 0.085,
+    "geometry": "parallel-jaw box proxy"
+  },
+  "candidates": [
+    {
+      "id": "usage_opposite",
+      "T_object_gripper": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          0.019
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.075
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "approach_point_object": [
+        0.019,
+        0.0,
+        -0.075
+      ],
+      "approach_ray_origin_object": [
+        0.219,
+        0.0,
+        -0.075
+      ]
+    },
+    {
+      "id": "free_same",
+      "T_object_gripper": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.004
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.04
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "approach_point_object": [
+        -0.004,
+        0.0,
+        0.04
+      ],
+      "approach_ray_origin_object": [
+        -0.20400000000000001,
+        0.0,
+        0.04
+      ]
+    },
+    {
+      "id": "free_top",
+      "T_object_gripper": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0,
+          0.10500000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "approach_point_object": [
+        0.0,
+        0.0,
+        0.10500000000000001
+      ],
+      "approach_ray_origin_object": [
+        0.0,
+        0.0,
+        0.30500000000000005
+      ]
+    }
+  ]
+}

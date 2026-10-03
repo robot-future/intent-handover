@@ -1,0 +1,14 @@
+{
+  "texthom": {
+    "google_drive_id": "1aLNSFOe1wuZA4nKzhlsvL6hOMxHm06ew",
+    "sha256": "b482f34d93847828b1ec1e8520f43ed2de3b6515157be29552f625d32d1dfb27"
+  },
+  "pointfeat": {
+    "google_drive_id": "1UPIW0Z0VunNZSbO994EmbC17eRPyQdX5",
+    "sha256": "96d8e41dfe1fa239925092a66d667190b8442f9e2fe9e1157d37a3ad170b1419"
+  },
+  "contact_estimator": {
+    "google_drive_id": "18xUQgxntYA0RB0eqdXc0omqbSSUEUD3c",
+    "sha256": "1695b83d775437be12fa23618087f0e2dbfb6ce869895c4d3bfba0232e03512a"
+  }
+}
